@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Bullet" />
+        <module name="Player" />
+        <module name="Asteroids" />
+        <module name="Enemy" />
+        <module name="CommonAsteroids" />
+        <module name="Collision" />
+        <module name="CommonBullet" />
+        <module name="Core" />
+        <module name="Common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Asteriods-Strate" target="9" />
+      <module name="Astroidetest (1)" target="1.5" />
+      <module name="Astroidetest (2)" target="9" />
+      <module name="Astroidtest" target="1.5" />
+      <module name="dk.cbse.jakob" target="9" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

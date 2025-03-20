@@ -1,0 +1,8 @@
+dk\cbse\jakob\common\services\IGamePluginService.class
+dk\cbse\jakob\common\data\GameData.class
+module-info.class
+dk\cbse\jakob\common\data\World.class
+dk\cbse\jakob\common\services\IPostEntityProcessingService.class
+dk\cbse\jakob\common\services\IEntityProcessingService.class
+dk\cbse\jakob\common\data\GameKeys.class
+dk\cbse\jakob\common\data\Entity.class
