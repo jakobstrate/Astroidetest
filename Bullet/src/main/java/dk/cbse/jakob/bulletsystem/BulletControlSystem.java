@@ -22,12 +22,9 @@ public class BulletControlSystem implements IEntityProcessingService, BulletSPI 
             bullet.setY(bullet.getY() + changeY * 4);
 
             // Check if bullet is outside the view
-            if (bullet.getX() < 0 || bullet.getX() > screenWidth ||
-                    bullet.getY() < 0 || bullet.getY() > screenHeight) {
-                world.removeEntity(bullet);
             }
         }
-    }
+
 
     @Override
     public Entity createBullet(Entity shooter, GameData gameData) {

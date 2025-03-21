@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>dk.cbse.jakob</groupId>
     <artifactId>Astroidetest</artifactId>
@@ -18,20 +16,22 @@
             <dependency>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-controls</artifactId>
-                <version>21.0.2</version>
+                <version>23.0.2</version>
             </dependency>
             <dependency>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-graphics</artifactId>
-                <version>21.0.2</version>
+                <version>23.0.2</version>
             </dependency>
             <dependency>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-base</artifactId>
-                <version>21.0.2</version>
+                <version>23.0.2</version>
             </dependency>
         </dependencies>
+
     </dependencyManagement>
+
 
     <build>
         <plugins>
@@ -115,12 +115,12 @@
     <modules>
         <module>Core</module>
         <module>Player</module>
-        <module>Enemy</module>
+        <module>Asteroids</module>
         <module>Common</module>
+        <module>Bullet</module>
+        <module>Collision</module>
         <module>CommonAsteroids</module>
         <module>CommonBullet</module>
-        <module>Bullet</module>
-        <module>Asteroids</module>
-        <module>Collision</module>
+        <module>Enemy</module>
     </modules>
 </project>

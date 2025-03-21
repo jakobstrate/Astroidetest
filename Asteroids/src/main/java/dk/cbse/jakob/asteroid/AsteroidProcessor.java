@@ -18,8 +18,8 @@ public class AsteroidProcessor implements IEntityProcessingService {
             double changeX = Math.cos(Math.toRadians(asteroid.getRotation()));
             double changeY = Math.sin(Math.toRadians(asteroid.getRotation()));
 
-            asteroid.setX(asteroid.getX() + changeX * 0.5);
-            asteroid.setY(asteroid.getY() + changeY * 0.5);
+            asteroid.setX(asteroid.getX() + changeX * 1);
+            asteroid.setY(asteroid.getY() + changeY * 1);
 
             if (asteroid.getX() < 0) {
                 asteroid.setX(asteroid.getX() - gameData.getDisplayWidth());
