@@ -21,6 +21,7 @@
       <module name="Asteriods-Strate" target="9" />
       <module name="Astroidetest (1)" target="1.5" />
       <module name="Astroidetest (2)" target="9" />
+      <module name="Astroideteste" target="9" />
       <module name="Astroidtest" target="1.5" />
       <module name="dk.cbse.jakob" target="9" />
     </bytecodeTargetLevel>

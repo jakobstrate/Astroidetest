@@ -36,6 +36,11 @@
       <artifactId>CommonBullet</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
+    <dependency>
+      <groupId>dk.cbse.jakob</groupId>
+      <artifactId>Player</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>

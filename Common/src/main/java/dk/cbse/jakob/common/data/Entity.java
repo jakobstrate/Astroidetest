@@ -2,6 +2,7 @@ package dk.cbse.jakob.common.data;
 
 import java.io.Serializable;
 import java.util.UUID;
+import javafx.scene.paint.Color;
 
 public class Entity implements Serializable {
 
@@ -12,7 +13,6 @@ public class Entity implements Serializable {
     private double y;
     private double rotation;
     private float radius;
-
 
     public String getID() {
         return ID.toString();
@@ -59,5 +59,9 @@ public class Entity implements Serializable {
 
     public float getRadius() {
         return this.radius;
+    }
+
+    public void onCollision(World world, GameData gameData) {
+        return;
     }
 }

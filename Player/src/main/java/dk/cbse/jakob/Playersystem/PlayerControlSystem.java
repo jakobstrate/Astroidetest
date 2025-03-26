@@ -27,7 +27,7 @@ public class PlayerControlSystem implements IEntityProcessingService {
                 player.setRotation(player.getRotation() + 4);
             }
             if (gameData.getKeys().isDown(GameKeys.UP)) {
-                double speed = 1.5;
+                double speed = 2.5;
                 double changeX = Math.cos(Math.toRadians(player.getRotation()));
                 double changeY = Math.sin(Math.toRadians(player.getRotation()));
                 player.setX(player.getX() + changeX * speed);

@@ -1,12 +1,12 @@
 package dk.cbse.jakob.enemysystem;
-
 import java.util.Random;
 import dk.cbse.jakob.common.data.Entity;
 import dk.cbse.jakob.common.data.GameData;
 import dk.cbse.jakob.common.data.World;
 import dk.cbse.jakob.common.services.IGamePluginService;
+
 public class EnemyPlugin implements IGamePluginService {
-     int num_enemies = 3;
+     int num_enemies = 4;
 
     @Override
     public void start(GameData gameData, World world) {
@@ -26,14 +26,14 @@ public class EnemyPlugin implements IGamePluginService {
     }
 
 
-    private Entity createEnemy(GameData gameData) {
+    public Entity createEnemy(GameData gameData) {
         Entity enemy = new Enemy();
         Random rnd = new Random();
         enemy.setPolygonCoordinates(-5,-5,10,0,-5,5);
         enemy.setX(rnd.nextInt(gameData.getDisplayWidth()));
         enemy.setY(rnd.nextInt(gameData.getDisplayHeight()));
         enemy.setRadius(8);
-        enemy.setRotation(rnd.nextInt(90));
+        enemy.setRotation(rnd.nextInt(360));
         return enemy;
     }
 

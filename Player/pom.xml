@@ -22,5 +22,10 @@
       <artifactId>CommonBullet</artifactId>
       <version>${project.version}</version>
     </dependency>
+      <dependency>
+          <groupId>org.openjfx</groupId>
+          <artifactId>javafx-graphics</artifactId>
+          <version>23.0.2</version>
+      </dependency>
   </dependencies>
 </project>

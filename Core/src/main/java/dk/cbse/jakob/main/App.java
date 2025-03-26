@@ -1,6 +1,7 @@
 package dk.cbse.jakob.main;
 
 import dk.cbse.jakob.common.data.Entity;
+import dk.cbse.jakob.Playersystem.Player;
 import dk.cbse.jakob.common.data.GameData;
 import dk.cbse.jakob.common.data.GameKeys;
 import dk.cbse.jakob.common.data.World;
@@ -17,9 +18,11 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
 
 public class App extends Application {
 
@@ -34,7 +37,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage window) throws Exception {
-        Text text = new Text(10, 20, "Destroyed asteroids: 0");
+        Text text = new Text(10, 20, "Destroyed asteroids: 0 | Destroyed enemies: 0");
         gameWindow.setPrefSize(gameData.getDisplayWidth(), gameData.getDisplayHeight());
         gameWindow.getChildren().add(text);
 
@@ -68,7 +71,6 @@ public class App extends Application {
             }
 
         });
-
         // Lookup all Game Plugins using ServiceLoader
         for (IGamePluginService iGamePlugin : getPluginServices()) {
             iGamePlugin.start(gameData, world);
@@ -77,6 +79,10 @@ public class App extends Application {
             Polygon polygon = new Polygon(entity.getPolygonCoordinates());
             polygons.put(entity, polygon);
             gameWindow.getChildren().add(polygon);
+        }
+        for (Entity player : world.getEntities(Player.class)) {
+            Polygon polygon= polygons.get(player);
+            polygon.setFill(Color.RED);
         }
         render();
         window.setScene(scene);

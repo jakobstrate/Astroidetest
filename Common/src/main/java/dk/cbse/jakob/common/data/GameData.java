@@ -1,5 +1,10 @@
 package dk.cbse.jakob.common.data;
 
+import javafx.scene.shape.Polygon;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 public class GameData {
 
     private int displayWidth  = 800 ;
@@ -26,6 +31,5 @@ public class GameData {
     public int getDisplayHeight() {
         return displayHeight;
     }
-
 
 }

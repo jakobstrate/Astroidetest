@@ -8,11 +8,15 @@ import dk.cbse.jakob.common.services.IGamePluginService;
 import java.util.Random;
 
 public class AsteroidPlugin implements IGamePluginService {
+    int num_asteroids = 4;
 
     @Override
     public void start(GameData gameData, World world) {
-        Entity asteroid = createAsteroid(gameData);
-        world.addEntity(asteroid);
+        for (int i = 0; i < num_asteroids; i++) {
+            Entity asteroid = createAsteroid(gameData);
+            world.addEntity(asteroid);
+        }
+
     }
 
     @Override
