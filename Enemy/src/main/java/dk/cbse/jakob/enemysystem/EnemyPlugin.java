@@ -6,7 +6,7 @@ import dk.cbse.jakob.common.data.World;
 import dk.cbse.jakob.common.services.IGamePluginService;
 
 public class EnemyPlugin implements IGamePluginService {
-     int num_enemies = 5;
+     int num_enemies = 4;
 
     @Override
     public void start(GameData gameData, World world) {

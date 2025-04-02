@@ -80,6 +80,7 @@ public class App extends Application {
             polygons.put(entity, polygon);
             gameWindow.getChildren().add(polygon);
         }
+        // Wrong way to do it, but did not know how else to do it.
         for (Entity player : world.getEntities(Player.class)) {
             Polygon polygon= polygons.get(player);
             polygon.setFill(Color.RED);
