@@ -42,7 +42,7 @@ public class EnemyProcessor implements IEntityProcessingService {
                 enemy.setY(enemy.getY() % gameData.getDisplayHeight());
 
             }
-            if (random < 0.15)
+            if (random < 0.10)
             getBulletSPIs().stream().findFirst().ifPresent(
                     spi -> {world.addEntity(spi.createBullet(enemy, gameData));}
             );
