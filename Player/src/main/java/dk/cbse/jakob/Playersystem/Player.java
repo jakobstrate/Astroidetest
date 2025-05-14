@@ -5,5 +5,4 @@ import dk.cbse.jakob.common.data.Entity;
 public class Player extends Entity {
 
 
-
 }

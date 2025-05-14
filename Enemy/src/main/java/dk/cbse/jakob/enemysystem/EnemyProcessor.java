@@ -5,25 +5,25 @@ import dk.cbse.jakob.common.services.IEntityProcessingService;
 import dk.cbse.jakob.common.data.Entity;
 import dk.cbse.jakob.common.data.GameData;
 import dk.cbse.jakob.common.data.World;
+import org.springframework.stereotype.Component;
 
 import java.util.Collection;
-import java.util.Random;
 import java.util.ServiceLoader;
 
 import static java.util.stream.Collectors.toList;
-
+@Component  
 public class EnemyProcessor implements IEntityProcessingService {
-    private double random = Math.random();
+    private double random;
     @Override
     public void process(GameData gameData, World world) {
-
+        random = Math.random();
 
         for (Entity enemy : world.getEntities(Enemy.class)) {
             double changeX = Math.cos(Math.toRadians(enemy.getRotation()));
             double changeY = Math.sin(Math.toRadians(enemy.getRotation()));
 
-            enemy.setX(enemy.getX() + changeX * 2);
-            enemy.setY(enemy.getY() + changeY * 2);
+            enemy.setX(enemy.getX() + changeX * 1);
+            enemy.setY(enemy.getY() + changeY * 1);
 
             if (enemy.getX() < 0) {
                 enemy.setX(enemy.getX() + gameData.getDisplayWidth());

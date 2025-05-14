@@ -4,9 +4,11 @@ import dk.cbse.jakob.common.data.Entity;
 import dk.cbse.jakob.common.data.GameData;
 import dk.cbse.jakob.common.data.World;
 import dk.cbse.jakob.common.services.IGamePluginService;
+import org.springframework.stereotype.Component;
 
+@Component
 public class EnemyPlugin implements IGamePluginService {
-     int num_enemies = 4;
+     int num_enemies = 3;
 
     @Override
     public void start(GameData gameData, World world) {

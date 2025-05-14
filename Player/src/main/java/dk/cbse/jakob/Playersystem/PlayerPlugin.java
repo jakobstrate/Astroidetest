@@ -4,8 +4,9 @@ import dk.cbse.jakob.common.data.Entity;
 import dk.cbse.jakob.common.data.GameData;
 import dk.cbse.jakob.common.data.World;
 import dk.cbse.jakob.common.services.IGamePluginService;
-import javafx.scene.paint.Color;
+import org.springframework.stereotype.Component;
 
+@Component
 public class PlayerPlugin implements IGamePluginService {
 
     private Entity player;

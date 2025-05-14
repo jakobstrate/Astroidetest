@@ -5,10 +5,12 @@ import dk.cbse.jakob.common.data.Entity;
 import dk.cbse.jakob.common.data.GameData;
 import dk.cbse.jakob.common.data.World;
 import dk.cbse.jakob.common.services.IGamePluginService;
-import java.util.Random;
+import org.springframework.stereotype.Component;
 
+import java.util.Random;
+@Component
 public class AsteroidPlugin implements IGamePluginService {
-    int num_asteroids = 4;
+    int num_asteroids = 10;
 
     @Override
     public void start(GameData gameData, World world) {
@@ -30,12 +32,12 @@ public class AsteroidPlugin implements IGamePluginService {
     private Entity createAsteroid(GameData gameData) {
         Entity asteroid = new Asteroid();
         Random rnd = new Random();
-        int size = rnd.nextInt(10);
+        int size = rnd.nextInt(5,20);
         asteroid.setPolygonCoordinates(size, -size, -size, -size, -size, size, size, size);
         asteroid.setX(rnd.nextInt(gameData.getDisplayWidth()));
         asteroid.setY(rnd.nextInt(gameData.getDisplayHeight()));
         asteroid.setRadius(size);
-        asteroid.setRotation(rnd.nextInt(90));
+        asteroid.setRotation(rnd.nextInt(360));
         return asteroid;
     }
 }

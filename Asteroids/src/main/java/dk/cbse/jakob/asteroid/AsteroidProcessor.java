@@ -6,7 +6,9 @@ import dk.cbse.jakob.common.data.Entity;
 import dk.cbse.jakob.common.data.GameData;
 import dk.cbse.jakob.common.data.World;
 import dk.cbse.jakob.common.services.IEntityProcessingService;
+import org.springframework.stereotype.Component;
 
+@Component
 public class AsteroidProcessor implements IEntityProcessingService {
 
     private IAsteroidSplitter asteroidSplitter = new AsteroidSplitterImpl();

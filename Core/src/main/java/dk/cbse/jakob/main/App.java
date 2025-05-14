@@ -8,11 +8,9 @@ import dk.cbse.jakob.common.data.World;
 import dk.cbse.jakob.common.services.IEntityProcessingService;
 import dk.cbse.jakob.common.services.IGamePluginService;
 import dk.cbse.jakob.common.services.IPostEntityProcessingService;
-import java.util.Collection;
+import java.util.List;
 import java.util.Map;
-import java.util.ServiceLoader;
 import java.util.concurrent.ConcurrentHashMap;
-import static java.util.stream.Collectors.toList;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -22,20 +20,27 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.springframework.beans.factory.annotation.Autowired;
 
 
-public class App extends Application {
+public class App {
 
     private final GameData gameData = new GameData();
     private final World world = new World();
     private final Map<Entity, Polygon> polygons = new ConcurrentHashMap<>();
     private final Pane gameWindow = new Pane();
 
-    public static void main(String[] args) {
-        launch(App.class);
+    private List<IGamePluginService> gamePluginServices;
+    private List<IEntityProcessingService> entityProcessingServiceList;
+    private List<IPostEntityProcessingService> postEntityProcessingServices;
+
+    public App (List<IGamePluginService> gamePluginServices, List<IEntityProcessingService> entityProcessingServiceList, List<IPostEntityProcessingService> postEntityProcessingServices){
+        this.gamePluginServices = gamePluginServices;
+        this.entityProcessingServiceList = entityProcessingServiceList;
+        this.postEntityProcessingServices = postEntityProcessingServices;
     }
 
-    @Override
+
     public void start(Stage window) throws Exception {
         Text text = new Text(10, 20, "Destroyed asteroids: 0 | Destroyed enemies: 0");
         gameWindow.setPrefSize(gameData.getDisplayWidth(), gameData.getDisplayHeight());
@@ -91,7 +96,7 @@ public class App extends Application {
         window.show();
     }
 
-    private void render() {
+    public void render() {
         new AnimationTimer() {
             @Override
             public void handle(long now) {
@@ -134,7 +139,7 @@ public class App extends Application {
         }
 
     }
-
+/*
     private Collection<? extends IGamePluginService> getPluginServices() {
         return ServiceLoader.load(IGamePluginService.class).stream().map(ServiceLoader.Provider::get).collect(toList());
     }
@@ -145,5 +150,16 @@ public class App extends Application {
 
     private Collection<? extends IPostEntityProcessingService> getPostEntityProcessingServices() {
         return ServiceLoader.load(IPostEntityProcessingService.class).stream().map(ServiceLoader.Provider::get).collect(toList());
+    }
+ */
+    public List<IGamePluginService> getPluginServices(){
+        return gamePluginServices;
+    }
+    public List<IEntityProcessingService> getEntityProcessingServices(){
+        return entityProcessingServiceList;
+    }
+    public List<IPostEntityProcessingService> getPostEntityProcessingServices(){
+        return postEntityProcessingServices;
+
     }
 }

@@ -3,6 +3,7 @@ import dk.cbse.jakob.common.services.IEntityProcessingService;
 import dk.cbse.jakob.common.services.IGamePluginService;
 
 module Bullet {
+    requires spring.context;
     requires Common;
     requires CommonBullet;
     provides IGamePluginService with dk.cbse.jakob.bulletsystem.BulletPlugin;

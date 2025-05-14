@@ -5,6 +5,7 @@ import dk.cbse.jakob.common.services.IGamePluginService;
 module Enemy {
     requires Common;
     requires CommonBullet;
+    requires spring.context;
     uses BulletSPI;
     provides IGamePluginService with dk.cbse.jakob.enemysystem.EnemyPlugin;
     provides IEntityProcessingService with dk.cbse.jakob.enemysystem.EnemyProcessor;

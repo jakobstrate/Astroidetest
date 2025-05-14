@@ -6,7 +6,9 @@ import dk.cbse.jakob.common.data.Entity;
 import dk.cbse.jakob.common.data.GameData;
 import dk.cbse.jakob.common.data.World;
 import dk.cbse.jakob.common.services.IEntityProcessingService;
+import org.springframework.stereotype.Component;
 
+@Component
 public class BulletControlSystem implements IEntityProcessingService, BulletSPI {
 
     @Override
@@ -18,8 +20,8 @@ public class BulletControlSystem implements IEntityProcessingService, BulletSPI 
             double changeX = Math.cos(Math.toRadians(bullet.getRotation()));
             double changeY = Math.sin(Math.toRadians(bullet.getRotation()));
 
-            bullet.setX(bullet.getX() + changeX * 5);
-            bullet.setY(bullet.getY() + changeY * 5);
+            bullet.setX(bullet.getX() + changeX * 3);
+            bullet.setY(bullet.getY() + changeY * 3);
 
             // Check if bullet is outside the view
             if (bullet.getX() < 0 || bullet.getX() > screenWidth || bullet.getY() < 0 || bullet.getY() > screenHeight) {

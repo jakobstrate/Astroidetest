@@ -5,7 +5,9 @@ import dk.cbse.jakob.common.data.Entity;
 import dk.cbse.jakob.common.data.GameData;
 import dk.cbse.jakob.common.data.World;
 import dk.cbse.jakob.common.services.IGamePluginService;
+import org.springframework.stereotype.Component;
 
+@Component
 public class BulletPlugin implements IGamePluginService {
 
     private Entity bullet;

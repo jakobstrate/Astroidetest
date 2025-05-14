@@ -3,8 +3,11 @@ module Core {
     requires CommonBullet;
     requires javafx.graphics;
     requires Player;
-    opens dk.cbse.jakob.main to javafx.graphics;
-    // opens dk.cbse.jakob.main to javafx.graphics,spring.core
+    requires spring.context;
+    requires spring.core;
+    requires spring.beans;
+    exports dk.cbse.jakob.main;
+    opens dk.cbse.jakob.main to javafx.graphics,spring.core;
     uses dk.cbse.jakob.common.services.IGamePluginService;
     uses dk.cbse.jakob.common.services.IEntityProcessingService;
     uses dk.cbse.jakob.common.services.IPostEntityProcessingService;
