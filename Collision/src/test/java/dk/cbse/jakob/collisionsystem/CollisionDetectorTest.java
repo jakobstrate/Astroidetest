@@ -46,4 +46,3 @@ public class CollisionDetectorTest {
         System.out.println(("Entities not colliding") + collisionDetector.collides(e1, e2));
     }
 }
-
