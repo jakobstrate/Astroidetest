@@ -6,3 +6,4 @@ dk\cbse\jakob\common\services\IPostEntityProcessingService.class
 dk\cbse\jakob\common\services\IEntityProcessingService.class
 dk\cbse\jakob\common\data\GameKeys.class
 dk\cbse\jakob\common\data\Entity.class
+dk\cbse\jakob\common\util\ServiceLocator.class

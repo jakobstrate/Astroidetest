@@ -9,9 +9,9 @@
         <module name="Bullet" />
         <module name="Player" />
         <module name="Asteroids" />
-        <module name="Enemy" />
         <module name="CommonAsteroids" />
         <module name="Collision" />
+        <module name="Enemy" />
         <module name="CommonBullet" />
         <module name="MicroService_ScoringSystem" />
         <module name="Core" />
@@ -25,6 +25,9 @@
       <module name="Astroideteste" target="9" />
       <module name="Astroidtest" target="1.5" />
       <module name="dk.cbse.jakob" target="9" />
+      <module name="enemy" target="21" />
+      <module name="player" target="21" />
+      <module name="Player (2)" target="9" />
     </bytecodeTargetLevel>
   </component>
 </project>

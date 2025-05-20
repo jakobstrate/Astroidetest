@@ -8,19 +8,24 @@ import dk.cbse.jakob.common.data.World;
 import dk.cbse.jakob.common.services.IEntityProcessingService;
 import dk.cbse.jakob.common.services.IGamePluginService;
 import dk.cbse.jakob.common.services.IPostEntityProcessingService;
-import java.util.List;
-import java.util.Map;
+
+import java.lang.module.Configuration;
+import java.lang.module.ModuleFinder;
+import java.nio.file.Paths;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Collectors;
+
+import dk.cbse.jakob.common.util.ServiceLocator;
 import javafx.animation.AnimationTimer;
-import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Path;
 import javafx.scene.shape.Polygon;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import org.springframework.beans.factory.annotation.Autowired;
 
 
 public class App {
@@ -139,7 +144,7 @@ public class App {
         }
 
     }
-/*
+    /*
     private Collection<? extends IGamePluginService> getPluginServices() {
         return ServiceLoader.load(IGamePluginService.class).stream().map(ServiceLoader.Provider::get).collect(toList());
     }
@@ -151,7 +156,22 @@ public class App {
     private Collection<? extends IPostEntityProcessingService> getPostEntityProcessingServices() {
         return ServiceLoader.load(IPostEntityProcessingService.class).stream().map(ServiceLoader.Provider::get).collect(toList());
     }
+
  */
+    /*
+    private Collection<? extends IGamePluginService> getPluginServices() {
+        return ServiceLocator.INSTANCE.locateAll(IGamePluginService.class);
+    }
+
+    private Collection<? extends IEntityProcessingService> getEntityProcessingServices() {
+        return ServiceLocator.INSTANCE.locateAll(IEntityProcessingService.class);
+    }
+
+    private Collection<? extends IPostEntityProcessingService> getPostEntityProcessingServices() {
+        return ServiceLocator.INSTANCE.locateAll(IPostEntityProcessingService.class);
+    }
+    */
+
     public List<IGamePluginService> getPluginServices(){
         return gamePluginServices;
     }

@@ -3,5 +3,6 @@ module Common {
     requires javafx.graphics;
     exports dk.cbse.jakob.common.data;
     exports dk.cbse.jakob.common.services;
+    exports dk.cbse.jakob.common.util;
 
 }
