@@ -10,16 +10,16 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class ScoringSystem{
-    private Long Score = 0L;
+    private int Score = 0;
 
     public static void main(String[] args) {
         SpringApplication.run(ScoringSystem.class, args);
     }
 
-    @GetMapping("/Score")
-    public Long CalculateHealth(@RequestParam(value = "points") Long point){
+    @GetMapping("/ScoringSystem")
+    public int CalculateHealth(@RequestParam(value = "points", defaultValue = "World") int point){
         Score += point;
         return Score;
     }
-// to access the site insert this URL: http://localhost:8080/Score?points= insert amount of points
+// to access the site insert this URL: http://localhost:8080/ScoringSystem?points= insert amount of points
 }
