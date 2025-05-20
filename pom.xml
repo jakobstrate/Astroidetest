@@ -163,5 +163,6 @@
         <module>CommonAsteroids</module>
         <module>CommonBullet</module>
         <module>Enemy</module>
+        <module>MicroService_ScoringSystem</module>
     </modules>
 </project>

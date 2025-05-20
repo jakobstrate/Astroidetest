@@ -13,6 +13,7 @@
         <module name="CommonAsteroids" />
         <module name="Collision" />
         <module name="CommonBullet" />
+        <module name="MicroService_ScoringSystem" />
         <module name="Core" />
         <module name="Common" />
       </profile>
