@@ -4,6 +4,8 @@ import dk.cbse.jakob.common.asteroids.IAsteroidSplitter;
 import dk.cbse.jakob.common.data.Entity;
 import org.junit.Before;
 import org.junit.Test;
+import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.*;
 
 public class CollisionDetectorTest {
@@ -28,7 +30,7 @@ public class CollisionDetectorTest {
         e2.setY(4);
         e2.setRadius(2);
 
-        System.out.println(("Entities colliding") + collisionDetector.collides(e1, e2));
+        assertTrue(collisionDetector.collides(e1, e2));
     }
 
     @Test
@@ -43,6 +45,6 @@ public class CollisionDetectorTest {
         e2.setY(10);
         e2.setRadius(1);
 
-        System.out.println(("Entities not colliding") + collisionDetector.collides(e1, e2));
+        assertFalse(collisionDetector.collides(e1, e2));
     }
 }
