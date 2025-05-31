@@ -19,7 +19,7 @@ public class CollisionDetector implements IPostEntityProcessingService {
     public CollisionDetector() {
         this(ServiceLoader.load(IAsteroidSplitter.class)
                 .findFirst()
-                .orElseThrow(() -> new IllegalStateException("cant find splitter")));
+                .orElse(null));
     }
 
     // Constructor for injecting a mock or custom splitter (used in testing)

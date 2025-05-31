@@ -2,7 +2,6 @@ module Core {
     requires Common;
     requires CommonBullet;
     requires javafx.graphics;
-    requires Player;
     requires spring.context;
     requires spring.core;
     requires spring.beans;
