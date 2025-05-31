@@ -1,7 +1,6 @@
 package dk.cbse.jakob.main;
 
 import dk.cbse.jakob.common.data.Entity;
-import dk.cbse.jakob.Playersystem.Player;
 import dk.cbse.jakob.common.data.GameData;
 import dk.cbse.jakob.common.data.GameKeys;
 import dk.cbse.jakob.common.data.World;
@@ -91,10 +90,6 @@ public class App {
             gameWindow.getChildren().add(polygon);
         }
         // Wrong way to do it, but did not know how else to do it.
-        for (Entity player : world.getEntities(Player.class)) {
-            Polygon polygon= polygons.get(player);
-            polygon.setFill(Color.RED);
-        }
         render();
         window.setScene(scene);
         window.setTitle("ASTEROIDS");
